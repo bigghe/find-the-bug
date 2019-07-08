@@ -18,7 +18,7 @@ Project's stack:
 
 ### Database
 Download PostgreSQL Portable from here:
-- https://gareth.flowers/postgresql-portable/](https://gareth.flowers/postgresql-portable/ 
+- https://gareth.flowers/postgresql-portable
 
 then start it.
 
