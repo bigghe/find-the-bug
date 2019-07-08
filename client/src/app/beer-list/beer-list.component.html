@@ -1,0 +1,25 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4" *ngFor="let b of beers">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+            alt="b.name" style="height: 170px; width: 100%; display: block;"
+            [src]="b.urlImage" data-holder-rendered="true">
+          <div class="card-body">
+            <h4>{{b.name}}</h4>
+            <p class="card-text">Descrizione: {{b.descrizione}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button [routerLink]="['/beer-detail',b.id]" routerLinkActive="router-link-active"  type="button" class="btn btn-sm btn-outline-secondary">View</button>
+              </div>
+              <small class="text-muted">Stout</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

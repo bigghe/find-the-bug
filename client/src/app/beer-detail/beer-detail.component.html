@@ -1,0 +1,26 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+            alt="Thumbnail [100%x225]" style="height: 370px; width: 100%; display: block;"
+            [src]="beerDetail.urlImage" data-holder-rendered="true">
+          <div class="card-body">
+            <h4>{{beerDetail.name}}</h4>
+            <p class="card-text">
+
+              {{beerDetail.description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button [routerLink]="['/brewery',beerDetail.idBrewery]" routerLinkActive="router-link-active"  type="button" class="btn btn-sm btn-outline-secondary">Brewery</button>
+              </div>
+              <small class="text-muted">Stout</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

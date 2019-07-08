@@ -1,0 +1,53 @@
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top"
+              [alt]="brewery?.name" style="height: 370px; width: 100%; display: block;"
+              [src]="brewery?.urlImage" data-holder-rendered="true">
+            <div class="card-body">
+              <h4>{{brewery?.name}}</h4>
+              <p class="card-text">
+
+                {{brewery?.description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Stout</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4" *ngFor="let b of breweryBeers">
+            <div class="card mb-4 box-shadow">
+              <img class="card-img-top"
+                alt="Thumbnail [100%x225]" style="height: 170px; width: 100%; display: block;"
+                [src]="b.urlImage" data-holder-rendered="true">
+              <div class="card-body">
+                <h4>{{b.name}}</h4>
+                <p class="card-text">
+
+                  {{b.description}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button [routerLink]="['/beer-detail',b.id]" routerLinkActive="router-link-active"  type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  </div>
+                  <small class="text-muted">Stout</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
